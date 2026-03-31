@@ -907,9 +907,9 @@ def crawl_chapter(chapter_url, folder, chapter, comic_format, task_id):
                 if len(chapter_name) > 100:
                     chapter_name = chapter_name[:100]
             
-            # 构建文件名：序号_章节名 或 只用序号
+            # 构建文件名：章节名（不带序号前缀）
             if chapter_name:
-                file_name = f"{chapter:02d}_{chapter_name}"
+                file_name = chapter_name
             else:
                 file_name = f"{chapter:02d}"
             

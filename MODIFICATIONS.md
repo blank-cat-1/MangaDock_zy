@@ -61,13 +61,17 @@ if not valid_url:
 
 **示例**:
 - 修改前: `01.pdf`
-- 修改后: `01_第1话 初次见面.pdf`
+- 修改后: `第1话 初次见面.pdf`（纯章节名，不带序号前缀）
 
 **新增/修改的函数**:
 - `crawl_chapter()`: 添加章节名提取逻辑
 - `images_to_pdf_with_name()`: 支持自定义文件名的 PDF 生成
 - `images_to_cbz_with_name()`: 支持自定义文件名的 CBZ 生成
 - `_convert_images_to_pdf()`: PDF 转换的公共逻辑提取
+
+**文件名格式**:
+- 使用纯章节名命名，不带序号前缀
+- 如果无法获取章节名，使用序号（如 `01.pdf`）
 
 ---
 
